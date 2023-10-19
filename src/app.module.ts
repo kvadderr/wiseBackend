@@ -21,7 +21,10 @@ import { ReceipIngredient } from './receip/entities/receipingredient.entity';
       timeout: 5000,
       maxRedirects: 5,
     }),
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
