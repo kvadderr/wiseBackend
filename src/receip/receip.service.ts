@@ -10,7 +10,7 @@ import { Receip } from './entities/receip.entity';
 import { ReceipIngredient } from './entities/receipingredient.entity';
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const format = {
